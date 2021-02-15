@@ -3,9 +3,9 @@
 require('../app/functions.php');
 
 $names = [
-  // 'taro',
-  // 'jiro',
-  // 'saburo',
+  'Taro',
+  'Jiro',
+  'Saburo',
 ];
 
 ?>
@@ -17,15 +17,13 @@ $names = [
 </head>
 <body>
   <ul>
-
-  <?php if (empty($nmaes)) { ?>
-    <li>Nobady!</li>
-  <?php } else { ?>
-    <?php foreach ($names as $name) { ?>
-      <li><?= h($name); ?></li>
-    <?php } ?>
-  <?php } ?>
-
+  <?php if (empty($names)): ?>
+    <li>Nobody!</li>
+  <?php else: ?>
+  <?php foreach ($names as $name): ?>
+    <li><?= h($name); ?></li>
+  <?php endforeach; ?>
+  <?php endif; ?>
   </ul>
 </body>
 </html>
