@@ -9,7 +9,7 @@ include('../app/_parts/_header.php');
 
 ?>
 
-  <p><?= h($message); ?></p>
+  <p><?= nl2br(h($message)); ?></p>
   <p><a href="index2.php">Go back</a></p>
 
 <?php
