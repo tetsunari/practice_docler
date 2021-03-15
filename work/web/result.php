@@ -2,16 +2,15 @@
 
 require('../app/functions.php');
 
-// $color = filter_input(INPUT_GET, 'color');
-// $color = isset($color) ? $color : 'None selected';
-// $color = $color ?? 'None selected';  //上二つと同じ動き
-$color = filter_input(INPUT_GET, 'color') ?? 'None selected';
+$colorFromGet = filter_input(INPUT_GET, 'color') ?? 'transparent';
+setcookie('color', $colorFromGet);
+//setcookieの前でechoや、PHP の開始タグの前に HTML を書いたりしてはいけないので、注意しておきましょう。
 
 include('../app/_parts/_header.php');
 
 ?>
 
-  <p><?= h($color); ?></p>
+  <p><?= h($colorFromGet); ?></p>
   <p><a href="index2.php">Go back</a></p>
 
 <?php

@@ -2,6 +2,9 @@
 
 require('../app/functions.php');
 
+// $color = filter_input(INPUT_COOKIE, 'color') ?? 'transparent';
+//ページが増えるたびに書くの面倒なのでheaderにかく
+
 include('../app/_parts/_header.php');
 
 ?>
