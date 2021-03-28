@@ -3,8 +3,7 @@
 require('../app/functions.php');
 
 $colorFromGet = filter_input(INPUT_GET, 'color') ?? 'transparent';
-setcookie('color', $colorFromGet);
-//setcookieの前でechoや、PHP の開始タグの前に HTML を書いたりしてはいけないので、注意しておきましょう。
+$_SESSION['color'] = $colorFromGet;
 
 include('../app/_parts/_header.php');
 
